@@ -177,18 +177,18 @@
 							</div>
 							<div class="form-group" id="agcconta">
 								<label for="agcconta"> 
-									Escreva a agência e conta de sua empresa:
+									Insira os dados de pagamento da empresa:
 								</label>
 								<div class="row">
-									<div class="col-sm-4">
-											<br/>
-										Escreva sua agência: 
-										<input type="text" name="agenciacc" id="agenciacc" class="form-control">
+									<div class="col-sm-6">
+										 <br />
+										 Agência: 
+										<input type="text" name="agenciacc" id="agenciacc">
 									</div>
 									<div class="col-sm-6">
 											<br/>
-										Escreva sua conta: 
-										<input type="text" name="conta" id="conta" class="form-control">
+										 Conta:
+										<input type="text" name="conta" id="conta">
 									</div>
 								</div>
 							</div>
@@ -211,7 +211,6 @@
 									Selecione o campo que deseja atualizar:
 								</label>
 								<select name="campo">
-									<option value="email">Email</option>
 									<option value="adress">Endereço</option>
 									<option value="city">Cidade</option>
 									<option value="state">Estado</option>

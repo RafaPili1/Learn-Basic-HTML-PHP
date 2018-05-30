@@ -9,7 +9,16 @@ $CNPJ = $_POST['CNPJdestruir'];
 $sql = "DELETE from estabelecimento WHERE CNPJ=?";
 $stmt = $con->prepare($sql);
 $stmt->bind_param("s",$CNPJ);
-$stmt->execute();
-$con->close();
+if($stmt->execute()) {
+	$con->close();
+	$stmt->close();
+	header('location:../index.php');
+	exit;
+}
 
+	else {
+		session_destroy();
+		$con->close();
+		exit;
+	}
 ?>
