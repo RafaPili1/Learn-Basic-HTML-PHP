@@ -4,7 +4,9 @@
 	<title>FIT-CARD cadastre seu estabelecimento!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script src="js/jquery-1.2.6.pack.js" type="text/javascript"></script>
 	<script src="js/jquery.maskedinput-1.1.4.pack.js" type="text/javascript" /></script>
 	<script type="text/javascript">
@@ -25,18 +27,25 @@
 </head>
 
 <body>
+	<div class="head">
+		<div class="container">
+			<div class="page-header">
+				<h1>FitCard</h1>
+			</div>
+		</div>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
 				<h1>Quero cadastrar meu estabelecimento</h1>
-				<p>Siga os passos do forms!</p>
+				<h4>Preencha os seus dados nos campos abaixo :)</h4>
 				<div class="row">
 					<div class="col-sm-6">
 						<form action="back-end/cadastro.php" method="POST" id="form">
 							<div class="form-group" id="Rs">
 							
 								<label for="razoes">
-									Insira sua razão social:
+									Insira a razão social da empresa:
 								</label>
 							
 								<input type="text" 
@@ -46,7 +55,7 @@
 							<div class="form-group" id="Nf">
 							
 								<label for="nomef">
-									Insira seu nome fiscal:
+									Insira o nome fantasia da empresa:
 								</label>
 							
 								<input type="text" 
@@ -56,7 +65,7 @@
 							<div class="form-group" id="cnpfj">
 							
 								<label for="cnpfj">
-									Insira seu CNPJ:
+									Insira o CNPJ da empresa:
 								</label>
 							
 								<input type="text" 
@@ -66,7 +75,7 @@
 							<div class="form-group" id="emailAdress">
 							
 								<label for="emailAdress">
-									Insira seu email:
+									Insira o email da empresa:
 								</label>
 							
 								<input type="text" 
@@ -76,7 +85,7 @@
 							<div class="form-group" id="endereco">
 							
 								<label for="endereco">
-									Insira seu endereço:
+									Insira o endereço da empresa:
 								</label>
 							
 								<input type="text" 
@@ -85,7 +94,7 @@
 							<div class="form-group" id="cidade">
 							
 								<label for="cidade">
-									Insira sua cidade:
+									Insira a cidade da empresa:
 								</label>
 							
 								<input type="text" 
@@ -93,7 +102,7 @@
 							</div>
 							<div class="form-group" id="estado">
 								<label for="estado">
-									Selecione seu estado:
+									Selecione um estado:
 								</label>
 								<select name="state">
 									<option value="AC">Acre</option>
@@ -128,7 +137,7 @@
 							<div class="form-group" id="telefone">
 							
 								<label for="telefone">
-									Escreva seu telefone:
+									Insira o telefone da empresa:
 								</label>
 
 								<input type="text" name="tel" class="form-control" id="phone">
@@ -215,35 +224,48 @@
 									Escreva aqui o novo campo:
 								</label>
 								<input type="text" name="dado" class="form-control" required>
-								<button type="submit" class="btn btn-default"> Pronto </button>
+								<br />
+								<button type="submit" class="btn btn-default"> Alterar </button>
 							</div>
 						</form>	
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<form action="back-end/destruir.php" method="POST" id="formDois">
-							<h3>Informe seu CNPJ se deseja remover seu cadastro:</h3>
-							<input type="text" name="CNPJdestruir" class="form-control" id="remocao">
-							<button type="submit" class="btn btn-default"> Remover </button>
-						</form>
-					</div>
-					<div class="col-sm-6">
-						<form action="" method="POST" id="formTres">
-							<h3>
-								Insira seu CNPJ se deseja ver seus dados salvos:
-							</h3>
+			</div>
+		</div>
+	</div>
+	<div class='rodape'>
+		<div class='container'>
+			<div class="row">
+				<div class="col-sm-6">
+					<form action="back-end/destruir.php" method="POST" id="formDois">
 							
-							<input type="text" name="" id="CNPJread">
-
-							<button type="submit" class="btn btn-default" id="butt"> Ver dados </button>
-
-							<div id="inside"></div>
+						<h3>
+							Informe seu CNPJ se deseja remover seu cadastro:
+						</h3>
+							
+						<input type="text" name="CNPJdestruir" class="form-control" id="remocao">
+						<br />
+						<button type="submit" class="btn btn-default"> Remover </button>
+						<br />
+						<br />
 						</form>
-					</div>
+				</div>
+				<div class="col-sm-6">
+					<form action="" method="POST" id="formTres">
+						<h3>
+							Insira seu CNPJ se deseja ver seus dados salvos:
+						</h3>
+
+						<input type="text" name="" id="CNPJread" class="form-control">
+						<br />
+						<button type="submit" class="btn btn-default" id="butt"> Ver dados </button>
+						<br />
+						<div id="inside"></div>
+					</form>
 				</div>
 			</div>
 		</div>
+			Autoria de: Rafael Cabral Pili
 	</div>
 </body>
 
