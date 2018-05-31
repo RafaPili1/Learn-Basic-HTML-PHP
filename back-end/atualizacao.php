@@ -10,15 +10,24 @@ $novoTexto = $_POST["dado"];
  
  //salvandando dados na cadeia
 
-$sql = "UPDATE estabelecimento SET '$campo'=? WHERE CNPJ='$cnpj'";
+
+if($campo == 'tel')    $sql = "UPDATE estabelecimento SET tel=? WHERE CNPJ=?";
+if($campo == 'adress') $sql = "UPDATE estabelecimento SET adress=? WHERE CNPJ=?";
+if($campo == 'city')   $sql = "UPDATE estabelecimento SET city=? WHERE CNPJ=?";
+if($campo == 'state')  $sql = "UPDATE estabelecimento SET state=? WHERE CNPJ=?";
+if($campo == 'status') $sql = "UPDATE estabelecimento SET status=? WHERE CNPJ=?";
+
+
+echo $sql;
 $stmt = $con->prepare($sql);
 
-$stmt->bind_param("s",$novoTexto);
+$stmt->bind_param("ss",$novoTexto,$cnpj);
 
 //verificicando se houve resultset
 if($stmt->execute()) {
 	$con->close();
 	$stmt->close();
+	header('location:../index.php');
 	exit;
 }
 

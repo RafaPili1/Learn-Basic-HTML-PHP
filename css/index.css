@@ -1,0 +1,17 @@
+
+.head {
+	background-color: rgb(255, 86, 89);	
+	font-family: 'Dosis', sans-serif; 
+}
+
+h1 {
+	font-weight: bold;
+}
+
+.rodape {
+	background-color: rgb(90, 94, 92);
+	color: white;
+}
+.rodape h3 {
+	font-weight: bold;
+}
