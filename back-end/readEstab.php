@@ -1,8 +1,6 @@
-
-<?php  
-	//conectando ao db
+<?php
 include ("connection.php");
-	//setando variaveis locais
+//setando variaveis locais
 
 $CNPJ = $_POST['CNPJ'];
 	//ok agora vamos procurar no banco se ja existe uma consulta marcada nesse horario
@@ -48,5 +46,4 @@ $output = array(
 );
 echo json_encode($output);
 $con->close();
-
 ?>

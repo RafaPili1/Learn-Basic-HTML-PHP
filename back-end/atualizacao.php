@@ -1,7 +1,5 @@
 <?php 
 
-session_start();
-
 include("connection.php");
 
 $cnpj  = $_POST["cnpjAntigo"];
@@ -17,8 +15,6 @@ if($campo == 'city')   $sql = "UPDATE estabelecimento SET city=? WHERE CNPJ=?";
 if($campo == 'state')  $sql = "UPDATE estabelecimento SET state=? WHERE CNPJ=?";
 if($campo == 'status') $sql = "UPDATE estabelecimento SET status=? WHERE CNPJ=?";
 
-
-echo $sql;
 $stmt = $con->prepare($sql);
 
 $stmt->bind_param("ss",$novoTexto,$cnpj);
