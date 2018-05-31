@@ -1,8 +1,7 @@
 <?php 
 
-session_start();
-
 include("connection.php");
+
 
 $rs    = $_POST['razoes'];
 $nf    = $_POST['nomef'];
@@ -26,10 +25,9 @@ $stmt->bind_param("sssssssssssss",$rs,$nf,$cnpj,$email,$end,$cidade,$estado,$tel
 
 //verificicando se houve resultset
 if($stmt->execute()) {
-
+    header('location:../index.php');
 	$con->close();
 	$stmt->close();
-	header('location:../index.php');
 	exit;
 }
 

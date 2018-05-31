@@ -7,8 +7,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script src="js/jquery-1.2.6.pack.js" type="text/javascript"></script>
-	<script src="js/jquery.maskedinput-1.1.4.pack.js" type="text/javascript" /></script>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script src="js/jquery.maskedinput.min.js" type="text/javascript" /></script>
 	<script type="text/javascript">
 		$(document).ready(function() {	
 			$("#cnpj").mask("99.999.999/9999-99");
@@ -68,7 +68,7 @@
 									Insira o CNPJ da empresa:
 								</label>
 							
-								<input type="text" 
+								<input type="text tel" 
 									name="cnpj" id="cnpj" class="form-control">
 							
 							</div>
@@ -149,7 +149,7 @@
 									Escreva a data do seu cadastro:
 								</label>
 							
-								<input type="text" 
+								<input type="text tel" 
 									name="dataCad" id="dataCadastro" class="form-control">
 							
 							</div>
@@ -183,12 +183,12 @@
 									<div class="col-sm-6">
 										 <br />
 										 Agência: 
-										<input type="text" name="agenciacc" id="agenciacc">
+										<input type="text tel" name="agenciacc" id="agenciacc">
 									</div>
 									<div class="col-sm-6">
 											<br/>
 										 Conta:
-										<input type="text" name="conta" id="conta">
+										<input type="text tel" name="conta" id="conta">
 									</div>
 								</div>
 							</div>
@@ -204,7 +204,7 @@
 								<label for="cnp">
 									Informe seu CNPJ:
 								</label>
-								<input type="text" name="cnpjAntigo" class="form-control" id="cnpjAntigo">
+								<input type="text tel" name="cnpjAntigo" class="form-control" id="cnpjAntigo">
 							</div>
 							<div class="form-group" id="selCadastro">
 								<label for="selCadastro">
@@ -242,7 +242,7 @@
 							Informe seu CNPJ se deseja remover seu cadastro:
 						</h3>
 							
-						<input type="text" name="CNPJdestruir" class="form-control" id="remocao">
+						<input type="text tel" name="CNPJdestruir" class="form-control" id="remocao">
 						<br />
 						<button type="submit" class="btn btn-default"> Remover </button>
 						<br />
@@ -255,7 +255,7 @@
 							Insira seu CNPJ se deseja ver seus dados salvos:
 						</h3>
 
-						<input type="text" name="" id="CNPJread" class="form-control">
+						<input type="text tel" name="" id="CNPJread" class="form-control">
 						<br />
 						<button type="submit" class="btn btn-default" id="butt"> Ver dados </button>
 						<br />

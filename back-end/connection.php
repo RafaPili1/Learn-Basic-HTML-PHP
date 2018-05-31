@@ -5,10 +5,9 @@ session_start();
 
 //variaveis locais 
 $localhost = 'localhost';
-$passwd = '';
-$user = 'root';
-$database = 'fit-card';
-
+$passwd = 'raabe123';
+$user = 'id6013545_root';
+$database = 'id6013545_localhost';
 
 //conexao ao db...
 
