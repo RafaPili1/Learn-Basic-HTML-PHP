@@ -82,7 +82,7 @@ $(document).ready(function(){
 		}
 
 		if(phone.length == 0 && controle){
-			$('#telefone').append("<div id='phoneError'>Você deve preencher o telefone</div>");
+			$('#telefone').append("<div id='phoneError' class='alert-warning'>Você deve preencher o telefone</div>");
 			return false;
 		}
 		else {
@@ -96,8 +96,7 @@ $(document).ready(function(){
 	
 	function avaliaEmail(email){
 		if(email == '')  {
-				alert("Email inválido");
-				return false;
+				return true;
 		} 
 		
 		if(email.indexOf("@") != -1){
